@@ -1,6 +1,7 @@
 /* Colors */
 :root {
 	--example: #000;
+	--c: #6c7365;
 }
 @property --c{
   syntax: '<color>';
@@ -8,7 +9,6 @@
   initial-value: #262824;
 }
 body {
-	background: #bec5b4;
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
@@ -17,11 +17,11 @@ body {
 	text-align: center;
 	min-height: 100vh;
 	position: relative;
-	/* background: linear-gradient(45deg, #b5c3a0, #262824),url('white_wall_hash.png');*/
-	background: linear-gradient(45deg, #b5c3a0, #dfe6d8),url('white_wall_hash.png');
+	background: #bec5b4;
 	background: linear-gradient(45deg, #b5c3a0, var(--c)),url('white_wall_hash.png');
 	background-blend-mode: multiply;
-	animation: 30s forwards sunrise; /* cubic-bezier(.93,.03,.94,.61) */
+	animation-delay: 8s;
+	animation: 5s forwards sunrise;  /* cubic-bezier(.93,.03,.94,.61) */
 }
 h1 {
 	font-size: 36px;
@@ -55,20 +55,23 @@ h1 {
 .landing-img {
 	margin-top: 40px;
 	max-width: 300px;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 .footer {
-	color: #5d6763;
+	color: #444444;
 	position: absolute;
 	bottom: 0;
 	width: 90%;
 	padding: 20px 5%;
 }
-.footer a:hover, .footer a:visited {
-	color: #5d6763
+.footer a, .footer a:hover, .footer a:visited {
+	color: #444444;
 }
 .footer .madewith {
 	font-size: 16px;
+}
+.footer .mobilebr {
+	display: block;
 }
 
 @media screen and (min-width: 600px) {
@@ -79,6 +82,9 @@ h1 {
 	.info-wrapper {
 		float: left;
 		margin-top: 45px;
+	}
+	.footer .mobilebr {
+		display: none;
 	}
 }
 @keyframes sunrise {
