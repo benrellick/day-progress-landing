@@ -1,0 +1,40 @@
+/* Colors */
+:root {
+	--example: #000;
+}
+body {
+	background: #bec5b4;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+}
+h1 {
+	font-size: 36px;
+	color: #151b19;
+}
+.intro-text {
+	font-size: 16px;
+	max-width: 280px;
+	margin: 0 auto;
+	color: #000;
+	}
+.launch-cta {
+	text-decoration: none;
+	background: #151b19;
+	color: #84917e;
+	padding: 10px 40px;
+	border-radius: 100px;
+	display: block;
+	max-width: fit-content;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-weight: bold;
+	border: 1px solid #343a31;
+}
+.landing-img {
+	margin-top: 40px;
+	max-width: 300px;
+}
