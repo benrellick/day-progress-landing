@@ -18,11 +18,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<title>Day Progress - landing page</title>
 	<link rel="stylesheet" href="styles.css">
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			const emojis= ['☕️','⚡️','🔮','🍀','✨','🍺','⌛️','🫀','🤠'];
+			const newtext = document.createTextNode(emojis[Math.floor(Math.random()*emojis.length)]);
+        	const elem = document.querySelector('.madewith');
+        	elem.appendChild(newtext);
+		});
+	</script>
+
 </head>
 
 <body>
-	<h1>Day Progress</h1>
-	<p class="intro-text">See your day as a progress bar of 1,440 minutes, color coded to show daylight vs nighttime.</p>
-	<a class="launch-cta" href="https://app.dayprogress.com">Launch app</a>
-	<img class="landing-img" src="dayprogress-iphone-mock.png" />
+	<div class="wrapper">
+		<div class="info-wrapper">
+			<h1>Day Progress</h1>
+			<p class="intro-text">See your day as a progress bar of 1,440 minutes, color coded to show daylight vs nighttime.</p>
+			<a class="launch-cta" href="https://app.dayprogress.com">Launch app</a>
+		</div>
+		<img class="landing-img" src="dayprogress-iphone-mock.png" />
+	</div>
+	<div class="footer">
+		Made with <span class="madewith"></span> by <a href="https://twitter.com/benrellick">@benrellick</a>, a human (ok ok, A.I. helped a little bit)
+	</div>
 </body>
