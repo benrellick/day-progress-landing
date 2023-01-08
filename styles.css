@@ -20,8 +20,8 @@ body {
 	background: #bec5b4;
 	background: linear-gradient(45deg, #b5c3a0, var(--c)),url('white_wall_hash.png');
 	background-blend-mode: multiply;
-	animation-delay: 8s;
 	animation: 5s forwards sunrise;  /* cubic-bezier(.93,.03,.94,.61) */
+	animation-delay: 5s
 }
 h1 {
 	font-size: 36px;
