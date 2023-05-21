@@ -1,13 +1,17 @@
 /* Colors */
 :root {
 	--example: #000;
-	--c: #6c7365;
+	--c: #42434a;
 }
 @property --c{
   syntax: '<color>';
   inherits: false;
-  initial-value: #262824;
+  initial-value: #42434a;
 }
+/* Blue
+	Gradient: #f6f8ff to #42434a, --c changes to #d1d4ea;
+*/
+
 body {
 	padding: 0;
 	margin: 0;
@@ -18,10 +22,10 @@ body {
 	min-height: 100vh;
 	position: relative;
 	background: #bec5b4;
-	background: linear-gradient(45deg, #b5c3a0, var(--c)),url('white_wall_hash.png');
+	background: linear-gradient(45deg, #f6f8ff, var(--c)),url('white_wall_hash.png');
 	background-blend-mode: multiply;
 	animation: 5s forwards sunrise;  /* cubic-bezier(.93,.03,.94,.61) */
-	animation-delay: 5s
+	animation-delay: 2s;
 }
 h1 {
 	font-size: 36px;
@@ -35,8 +39,8 @@ h1 {
 	}
 .launch-cta {
 	text-decoration: none;
-	background: #151b19;
-	color: #84917e;
+	background: #ff9579;
+	color: #fff;
 	padding: 10px 40px;
 	border-radius: 100px;
 	display: block;
@@ -44,13 +48,18 @@ h1 {
 	margin: 0 auto;
 	margin-top: 40px;
 	font-weight: bold;
-	border: 1px solid #343a31;
+	border: 1px solid #c36c55;
 	transition: all 0.15s ease-in-out;
+	min-width: 160px;
 }
 .launch-cta:hover {
-	transform: scale(1.1);
-	padding: 10px 50px;
-	color: #e7eedc;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.secondary-cta {
+  background: #fff;
+  color: #555;
+  border: 1px solid #ddd;
+  margin-top: 10px;
 }
 .landing-img {
 	margin-top: 40px;
@@ -89,10 +98,10 @@ h1 {
 }
 @keyframes sunrise {
 	from {
-		--c: #262824;
+		--c: #42434a;
 	}
 	to {
-		--c: #d9dac7;
+		--c: #d1d4ea;
 	}
 }
 
